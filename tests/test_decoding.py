@@ -91,3 +91,8 @@ class TestDecode(object):
             v = Vin(test['VIN'])
             print("Testing: %s" % test['VIN'])
             assert_equals(v.is_valid, True)
+
+        vin = '1' * 17
+        v = Vin(vin)
+        print("Testing: %s" % vin)
+        assert_equals(v.is_valid, False)
