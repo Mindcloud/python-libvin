@@ -83,6 +83,9 @@ class Vin(object):
             """
             return False
 
+        if len(set(self.vin)) <= 1:
+            return False
+
         return True
 
     @property
